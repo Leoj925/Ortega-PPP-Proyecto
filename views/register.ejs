@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%-include("./partials/head.ejs",{"css":["header.ejs","footer.ejs"]})%>
+
+    <head>
+        <link rel="stylesheet" type="text/CSS" href="/css/stylesRegister.css" />
+    </head>
+
+    <body>
+        <%-include("./partials/header.ejs")%>
+            <main>
+
+                <h1 class="register">Registrarse</h1>
+                <form class="formulario" action="/register" method="POST">
+                    <label for="nombre" class="item">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre">
+                    <label for="apellido" class="item">Apellido</label>
+                    <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido">
+                    <label for="fechaNacim" class="item">Fecha de Nacimiento</label>
+                    <input type="date" id="fechaNacim" name="fechaNacim" placeholder="Ingrese su fecha de nacimiento">
+                    <label for="email" class="item">e-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Ingrese su e-mail">
+                    <label for="emailConfirm" class="item">Repita su e-mail</label>
+                    <input type="email" id="emailConfirm" name="emailConfirm" placeholder="Confirme su e-mail">
+                    <label for="password" class="item">Contraseña</label>
+                    <input type="password" id="password" name="password" placeholder="Ingrese su contraseña">
+                    <label for="passwordConfirm" class="item">Repita su contraseña</label>
+                    <input type="password" id="passwordConfirm" name="passwordConfirm" placeholder="Confirme su contraseña">
+                    <button type="submit" id="submit">Crear usuario</button>
+                </form>
+                
+            </main>
+    </body>
+    <%-include("./partials/footer.ejs")%>
+
+</html>

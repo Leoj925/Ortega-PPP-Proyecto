@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%-include("./partials/head.ejs",{"css":["header.ejs","footer.ejs"]})%>
+
+    <head>
+        <link rel="stylesheet" type="text/CSS" href="/css/stylesLogin.css" />
+    </head>
+
+    <body>
+        <%-include("./partials/header.ejs")%>
+            <main>
+                <h1 class="login">Login</h1>
+                <form class="formulario">
+                    <label for="userName" class="item">e-mail</label>
+                    <input type="email" id="userName" placeholder="Ingrese su email">
+                    <label for="password" class="item">Contraseña</label>
+                    <input type="password" id="password" placeholder="Ingrese su contraseña">
+                    <div class="checkboxContainer">
+                        <label for="rememberUser">Recordar usuario</label>
+                        <input type="checkbox" id="rememberUser">
+                    </div>
+                    <div class="checkboxContainer">
+                        <label for="stayLogged">Mantenerse logueado</label>
+                        <input type="checkbox" id="stayLogged">
+                    </div>
+                </form>
+                <button type="submit">Ingresar</button>
+                <div class="olvideRegistrar">
+                    <h5 class="olvide">Olvide mi contraseña</h5>
+                    <h5 class="registrar">Registrarse</h5>
+                </div>
+
+
+
+            </main>
+            <%-include("./partials/footer.ejs")%>
+
+    </body>
+
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%-include(". /partials/head.ejs",{"css":["header.ejs","footer.ejs"]})%>
+
+    <head>
+        <link rel="stylesheet" type="text/CSS" href="/css/stylesCart.css" />
+    </head>
+
+    <body>
+        <%-include(". /partials/header.ejs")%>
+
+            <main class="cart">
+                <div class="superior">
+                    <h2 class="carrito">Carrito</h2>
+                    <a href="#" id="borraTodo">Borrar Todo</a>
+                </div>
+                <div class="carrito">
+                    <article class="articuloCart">
+                        <img src="./imagenes png/adidas metalbone.png" alt="imagen de articulo" class="imagenPaleta" />
+                        <h5 class="nombrePaleta">Adidas Metalbone HRD 3.2</h5>
+                        <div class="agregaQuita">
+                            <button class="quita">-</button>
+                            <h6 class="cantidad">1</h6>
+                            <button class="agrega">+</button>
+                        </div>
+                        <div class="precioCart">
+                            <p class="precio">$123456</p>
+                        </div>
+                        <div class="borraArticulo">
+                            <a href="#" class="button" id="botonBorrar">
+                                <img src="./imagenes png/trashbin.png" alt:"Trash" width="40" height="40" />
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="articuloCart">
+                        <img src="./imagenes png/pack-at2-genius-ltd-2023-agustin-tapia-limited-edition-992684.webp"
+                            alt="imagen de articulo" class="imagenPaleta" />
+                        <h5 class="nombrePaleta">Nox AT.2 Genius LTD 2023</h5>
+                        <div class="agregaQuita">
+                            <button class="quita">-</button>
+                            <h6 class="cantidad">1</h6>
+                            <button class="agrega">+</button>
+                        </div>
+                        <div class="precioCart">
+                            <p class="precio">$123456</p>
+                        </div>
+                        <div class="borraArticulo">
+                            <a href="#" class="button" id="botonBorrar">
+                                <img src="./imagenes png/trashbin.png" alt:"Trash" width="40" height="40" />
+                            </a>
+                        </div>
+                    </article>
+                </div>
+                <div class="total">
+                    <h4>Total $123456</h4>
+                </div>
+                <div class="pagar">
+                    <button class="botonPagar">Comprar Ahora</button>
+                </div>
+            </main>
+            <%-include(". /partials/footer.ejs")%>
+
+    </body>
+
+</html>
