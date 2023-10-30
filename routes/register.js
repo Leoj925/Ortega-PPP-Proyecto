@@ -3,6 +3,7 @@ const router = express.Router();
 const fs = require("fs");
 const bcrypt = require("bcrypt");
 const { saltRounds } = require("../utils/constants/bcrypt");
+var validateUser = require("../controllers/middleware/validateUser")
 
 router.get("/", (req, res) => {
     res.render("../views/register.ejs", { title: "Registro" });
@@ -37,6 +38,7 @@ router.post("/", validateUser, (req, res) => {
       req.session.user = newUser;
       req.session.loggedIn = true;
     }
-  });
+  }
+);
 
-module.exports(validateUser)
+module.exports = router;

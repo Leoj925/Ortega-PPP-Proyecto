@@ -17,3 +17,5 @@ const validateUser= [
           return true;
         })
 ];
+
+module.exports (validateUser)
