@@ -3,7 +3,8 @@
         "id": 1,
         "Nombre": "Juan",
         "Apellido": "Perez",
-        "email": "juan.perez1324@gmail.com"
+        "email": "juan.perez1324@gmail.com",
+        "password": ""
 
     }
 ]
