@@ -1,3 +1,4 @@
+const { body } = require('express-validator');
 const validateUser= [
     body("nombre").trim().notEmpty().isAlpha().withMessage("Solo caracteres alfabéticos"),
     body("apellido").trim().notEmpty().isAlpha().withMessage("Solo caracteres alfabéticos"),
@@ -18,4 +19,4 @@ const validateUser= [
         })
 ];
 
-module.exports (validateUser)
+module.exports = validateUser;

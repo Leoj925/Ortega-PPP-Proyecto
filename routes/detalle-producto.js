@@ -5,4 +5,4 @@ router.get("/", (req, res) => {
     res.render("../views/productDetail.ejs", { title: "Detalle-Producto" });
 });
 
-module.exports(router)  
+module.exports =router  

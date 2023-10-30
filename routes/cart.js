@@ -5,4 +5,4 @@ router.get("/", (req, res) => {
     res.render("../views/cart.ejs", { title: "Carrito" });
 });
 
-module.exports(router)  
+module.exports = router

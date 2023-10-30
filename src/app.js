@@ -16,7 +16,7 @@ var logout = require("../routes/logout");
 var productDetail = require("../routes/detalle-producto")
 var cart = require("../routes/cart");
 
-app.set("views", path.join(__dirname, "views"));
+app.set("views", path.join(__dirname, "../views"));
 app.set("view engine", "ejs");
 app.listen(PORT, ()=> console.log("Escuchando al puerto: ",PORT));
 
