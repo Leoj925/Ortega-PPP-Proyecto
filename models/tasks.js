@@ -1,15 +1,25 @@
 const fs = require("fs");
 
 const buscarUsuario = () => {
-    return JSON.parse(fs.readFileSync('../data/users.json', 'utf-8'));
+    try {
+        const data = fs.readFileSync('../data/users.json', 'utf-8');
+        return JSON.parse(data);
+    } catch (error) {
+        console.error("Error reading users file:", error.message);
+        return [];
+    }
 };
 
 const agregarUsuario = (usuario) => {
-    let usuarios = buscarUsuario();
-    usuarios.push (usuario);
-    let nuevosUsuarios= JSON.stringify (usuarios, null, 2);
-    fs.writeFileSync("../data/users.json", nuevosUsuarios);
-}
+    try {
+        let usuarios = buscarUsuario();
+        usuarios.push(usuario);
+        let nuevosUsuarios = JSON.stringify(usuarios, null, 2);
+        fs.writeFileSync("../data/users.json", nuevosUsuarios);
+    } catch (error) {
+        console.error("Error adding user:", error.message);
+    }
+};
 
 const buscarPorId = (id) => {
     let usuarios = buscarUsuario();

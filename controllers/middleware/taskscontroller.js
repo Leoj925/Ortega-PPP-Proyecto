@@ -40,7 +40,9 @@ const actualizarUsuario = (req, res, next) => {
         var nuevoUsuario = usuariosModel.actualizarPorId(
             id,
             req.body.nombre,
-            req.body.desc
+            req.body.apellido, 
+            req.body.email,
+            req.body.password
         );
         if (!nuevoUsuario) {
             res.status(404).send("Usuario no encontrado");
