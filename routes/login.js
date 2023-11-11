@@ -19,6 +19,7 @@ router.post("/",  (req, res) =>{
           if (match) {
             req.session.user = user;
             req.session.loggedIn = true;
+            res.redirect("/")
           } else {
             res.render("login", { message: "Credenciales inválidas!" });
           }
