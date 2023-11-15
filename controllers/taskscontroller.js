@@ -1,4 +1,4 @@
-const usuariosModel = require("../../models/tasks");
+const usuariosModel = require("../models/tasks");
 const { validationResult } = require("express-validator");
 
 const buscarUsuarios = (req, res, next) => {

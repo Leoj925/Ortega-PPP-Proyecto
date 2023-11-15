@@ -2,12 +2,13 @@ var express = require("express");
 var router = express.Router();
 const fs = require("fs");
 const bcrypt = require("bcrypt");
+const checkLogin = require("../controllers/checkLogin")
 
-router.get("/",  (req, res) => {
+router.get("/", checkLogin, (req, res) => {
   res.render("../views/login");
 });
 
-router.post("/",  (req, res) =>{
+router.post("/", checkLogin, (req, res) =>{
   const Users = JSON.parse(fs.readFileSync("../data/users.json", "utf8"));
   if (!req.body.id || !req.body.password) {
     res.render("../views/login", { message: "Ingrese usuario y contraseña" });
